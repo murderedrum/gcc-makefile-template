@@ -1,4 +1,4 @@
-# gcc-makefile-termplate
+# gcc-makefile-template
 ##### Version: 17.01.17
 
 ### Made for BSD/Linux bash script environment
