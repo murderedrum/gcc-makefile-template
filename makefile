@@ -8,7 +8,7 @@
 CC = gcc
 CFLAGS = -g -Wall -std=c99 -O2
 OBJECTS = main.o xxx.o yyy.o zzz.o
-TARGET = lzw
+TARGET = executable_name
 
 main : $(OBJECTS)
 	if [ -d ./objects ] ; then if [ -e ./objects/*.o ] ; then mv ./objects/*.o ; fi ; else mkdir ./objects ; fi ;
