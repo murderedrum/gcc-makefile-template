@@ -1,6 +1,6 @@
 # gcc-makefile-template
 # MIT License Copyright 2017 Ron Cotton
-# v17.01.17
+# v17.01.23
 # Github: https://github.com/murderedrum/gcc-makefile-termplate
 #
 # Makefile - for BSD/Linux w/ Bash enviornment
