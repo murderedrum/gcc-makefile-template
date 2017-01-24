@@ -8,15 +8,20 @@
 CC = gcc
 CFLAGS = -g -Wall -std=c99 -O2
 OBJECTS = main.o xxx.o yyy.o zzz.o
+NOHFILES = main
 TARGET = executable_name
+
+touch $(NOHFILES).h
 
 main : $(OBJECTS)
 	if [ -d ./objects ] ; then if [ -e ./objects/*.o ] ; then mv ./objects/*.o ; fi ; else mkdir ./objects ; fi ;
 	$(CC) $(CFLAGS) $(OBJECTS) -o  $(TARGET)
 	if [ -e $(TARGET).o ] ; then mv *.o ./objects/ ; fi ;
+	rm -f $(NOHFILES).h
 
 # makes .o files for each .c file
-%.o : %.c
+# note: takes into account the .h files (
+%.o : %.c %.h
 	$(CC) $(CFLAGS) -c $<
 
 .PHONY : clean
